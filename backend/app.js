@@ -1,12 +1,13 @@
 import express from "express";
 import mongoose from "mongoose";
-import router from "./src/routes/user.route.js";
+import UserRouter from "./src/routes/user.route.js";
+import BlogRouter from "./src/routes/blog.routes.js";
 const app = express();
 const port = 5000;
 
-
 app.use(express.json());
-app.use("/api/user", router);
+app.use("/api/user", UserRouter);
+app.use("/api/blog", BlogRouter);
 // connecting databse with mongodb
 mongoose
   .connect(

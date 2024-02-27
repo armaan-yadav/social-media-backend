@@ -33,6 +33,7 @@ const signUp = asyncHandler(async (req, res, next) => {
     email,
     password: hashedPassword,
     name,
+    blogs: [],
   });
   //saving the newly created user object
   try {

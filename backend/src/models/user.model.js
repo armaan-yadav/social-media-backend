@@ -16,6 +16,7 @@ const userSchema = new Schema(
       unique: true,
       minlength: 6,
     },
+    blogs: [{ type: Schema.Types.ObjectId, ref: "Blog", required: true }],
   },
   { timestamps: true }
 );
